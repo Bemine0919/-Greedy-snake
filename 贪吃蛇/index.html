@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <script src="./js/Block.js"></script>
+    <script src="./js/Food.js"></script>
+    <script src="./js/Map.js"></script>
+    <script src="./js/Snake.js"></script>
+    <script src="./js/Game.js"></script>
+    <script>
+        // 缓存图片
+        let pics = {
+            snakeHead: ['./img/1.png','./img/2.png','./img/3.png','./img/4.png'],
+            snakeTail: ['./img/6.png','./img/7.png','./img/8.png','./img/9.png'],
+            snakeBody: ['./img/5.png'],
+        }
+        // 实例化
+        let block = new Block('./img/block.png');
+        let food = new Food('./img/food.jpg');
+        let map = new Map(25, 30);
+        let snake = new Snake(pics);
+        let g = new Game(block, food, map, snake);
+        console.log(g);
+    </script>
+</body>
+</html>
